@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yo soy, Nicolás Saldarriaga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-mode="mixto" class="cargando">
+
+  <!-- Degradado para los medidores de habilidades -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="gradSkill" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" style="stop-color: var(--acento1)" />
+        <stop offset="100%" style="stop-color: var(--acento2)" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Cortina de entrada -->
+  <div class="intro" id="intro">
+    <div class="intro-izq"></div>
+    <div class="intro-der"></div>
+    <div class="intro-centro">
+      <div class="intro-logo">N<span>S</span></div>
+      <div class="intro-barra"><i></i></div>
+      <p>Cargando mi mundo...</p>
+    </div>
+  </div>
+
+  <!-- Fondo animado -->
+  <canvas id="particulas"></canvas>
+  <div class="fondo-progreso"></div>
+  <div class="lluvia" id="lluvia"></div>
+  <div class="escena" id="escena"></div>
+  <audio id="musica" loop preload="auto"></audio>
+  <input type="file" id="selectorAudio" accept="audio/*" hidden />
+  <div class="aviso-musica" id="avisoMusica"></div>
+  <div class="grid-fondo"></div>
+  <div class="glow-cursor" id="glowCursor"></div>
+  <div class="barra-progreso" id="barraProgreso"></div>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="menu">
+    <a href="#inicio" class="logo">N<span>S</span></a>
+    <ul>
+      <li><a href="#sobre-mi" data-fx="reflectores">Sobre mí</a></li>
+      <li><a href="#gustos" data-fx="pasta">Gustos</a></li>
+      <li><a href="#historia" data-fx="cohete">Historia</a></li>
+      <li><a href="#habilidades" data-fx="voley">Habilidades</a></li>
+      <li><a href="#suenos" data-fx="avion">Sueños</a></li>
+      <li><a href="#entorno" data-fx="gata">Mi entorno</a></li>
+      <li><a href="#curioso" data-fx="corazones">Dato curioso</a></li>
+    </ul>
+    <div class="acciones">
+      <button id="btnMusica" class="btn-musica" data-fx="rock" title="Música">🔇 Música</button>
+      <button id="btnModo" class="btn-modo" data-fx="pintura" title="Cambiar colores">🎨 Mixto</button>
+    </div>
+  </nav>
+
+  <main id="contenido">
+
+    <!-- ========== INICIO ========== -->
+    <section id="inicio" class="seccion hero" data-trans="zoom">
+      <div class="orbe orbe1"></div>
+      <div class="orbe orbe2"></div>
+      <div class="orbe orbe3"></div>
+      <div class="anillo anillo1"></div>
+      <div class="anillo anillo2"></div>
+      <div class="hero-contenido rv">
+        <p class="saludo">¡Hola, mundo! 👋</p>
+        <h1 class="titulo-glitch" data-text="Yo soy, Nicolás Saldarriaga">Yo soy, Nicolás Saldarriaga</h1>
+        <p class="escribiendo">Soy <span id="typed"></span><span class="cursor">|</span></p>
+        <p class="hero-sub">Bienvenido a mi pequeño mundo digital, como yo jeje. Te invito a pasar, explorar y conocerme un poquitito más.</p>
+        <blockquote class="mi-frase">
+          “No te rindas jamás: la verdadera fuerza está en levantarte una y otra vez y mantener la frente en alto, a pesar de todo y de todos.” ❤️💚
+          <span>— Nicolás Saldarriaga</span>
+        </blockquote>
+        <a href="#sobre-mi" class="btn-neon" data-fx="brujula">Empezar el viaje ↓</a>
+      </div>
+      <div class="scroll-hint">scroll</div>
+    </section>
+
+    <!-- ========== SOBRE MÍ ========== -->
+    <section id="sobre-mi" class="seccion" data-trans="circulo">
+      <h2 class="titulo-sec rv"><span>01</span> Sobre mí</h2>
+      <div class="sobre-grid">
+        <div class="foto-marco rv">
+          <div class="foto-placeholder">📸<small>Pon tu foto en img/yo.jpg</small></div>
+          <img src="img/yo.jpg" alt="Foto de Nicolás" onerror="this.style.display='none'" />
+        </div>
+        <div class="tarjeta rv">
+          <h3>¿Quién soy?</h3>
+          <p>¡Holaaa! Me llamo Nicolás Saldarriaga, aunque todos me dicen <strong class="verde">Saldarriaga</strong> o <strong class="rojo">Salda</strong> (soy más conocido por mi apellido que por mi nombre). Nací el 14 de octubre de 2011 en Lima, Perú, tengo 15 años y estudio en Clemente Althaus School desde tercer grado de primaria.</p>
+          <p>Me considero alguien bastante extrovertido a quien no se le dificulta hablar con nadie ni hacer amistades (algo que valoro mucho). Siempre puedes confiar en mí para tus más grandes secretos o para simplemente escucharte o aconsejarte donde sea que esté.</p>
+          <p>Casi todos me describen como una persona <strong class="rojo">alegre</strong> y de <strong class="verde">buen corazón</strong>, y como un buen amigo en quien siempre pueden confiar. Me gusta hacer reír a los demás y ayudar cuando puedo, incluso si eso significa poner su sonrisa sobre la mía: mi mejor regalo es verlos sonreír a ellos.</p>
+          <div class="chips">
+            <span class="chip">🛡️ Infalible</span>
+            <span class="chip">🔒 Confiable</span>
+            <span class="chip chip2">📏 1,60 m (y creciendo 😎)</span>
+            <span class="chip chip2">📱 WhatsApp abierto 24/7</span>
+            <span class="chip chip2">🐾 Pet lover</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cursos-grid">
+        <div class="curso rv"><div class="emoji">💚</div><h3>Mis favoritos</h3><p>Biología e inglés: se me dan demasiado bien y los disfruto un montón.</p></div>
+        <div class="curso rv"><div class="emoji">😅</div><h3>Bueno, pero no me encantan</h3><p>Matemática e historia: soy bueno en ellos, pero no son lo mío.</p></div>
+        <div class="curso rv"><div class="emoji">💀</div><h3>No tolero nadita</h3><p>Física, física y física. ODIO FÍSICA, sobre todo tensiones, simplemente no lo puedo entender.</p></div>
+      </div>
+    </section>
+
+    <!-- ========== GUSTOS ========== -->
+    <section id="gustos" class="seccion" data-trans="voltear">
+      <h2 class="titulo-sec rv"><span>02</span> Mis gustos e intereses</h2>
+      <div class="cards-grid">
+        <article class="card-gusto rv"><div class="emoji">🎵</div><h3>Música</h3><p>Soy bastante variado, pero en especial me gustan el rock y el pop. Eso sí: el kpop no, con toda mi existencia, y un poco del reguetón actual tampoco.</p></article>
+        <article class="card-gusto rv"><div class="emoji">🎬</div><h3>Películas y series</h3><p>Me encantan las series animadas y animes (no soy otaku 😅) como One Piece (que tenga más de 1000 capítulos no es excusa para lo buena que es) y Tokyo Revengers (una amiga me lo recomendó y, 10/10).</p></article>
+        <article class="card-gusto rv"><div class="emoji">🎮</div><h3>Videojuegos</h3><p>Mis favoritos son Brawl Stars, Roblox, Hollow Knight y LoL, pero también juego otras cosas variadas como Clash Royale, Fall Guys, Crash Bandicoot, Geometry Dash, etc. (aunque últimamente casi no los juego).</p></article>
+        <article class="card-gusto rv"><div class="emoji">⚽</div><h3>Deportes</h3><p>Soy de esas pocas personas a las que les gusta ver el fútbol, pero odian jugarlo. Eso sí, soy bastante bueno en vóley, karate, tenis y natación (que de pequeño odiaba y ahora me encanta).</p></article>
+        <article class="card-gusto rv"><div class="emoji">🍝</div><h3>Comida</h3><p>Pasta 100 %. En donde sea, cuando sea y como sea, aunque soy de esas personas que come casi de todo (menos arroz con pollo y seco, no soy fan del culantro) y parece que no tengo fondo (pero me gusta comer, así que no hay problema).</p></article>
+        <article class="card-gusto rv"><div class="emoji">🎧</div><h3>Actividades favoritas</h3><p>Jugar videojuegos, hablar con mis amigos y, a veces, escuchar música mientras dibujo (aunque últimamente no lo he practicado mucho).</p></article>
+      </div>
+    </section>
+
+    <!-- ========== HISTORIA ========== -->
+    <section id="historia" class="seccion" data-trans="deslizar">
+      <h2 class="titulo-sec rv"><span>03</span> Mi historia</h2>
+      <p class="intro-sec rv">Mi vida ha tenido un sinfín de riesgos... y todo indica que seguirá así 😅</p>
+      <div class="linea-tiempo">
+        <div class="hito rv">
+          <div class="punto"></div>
+          <div class="hito-card">
+            <img class="foto-hito" src="img/hito1.jpg" alt="Recuerdo del kinder" onerror="this.remove()" />
+            <span class="anio">A los 5 años</span><h3>El susto del kinder</h3><p>Casi pierdo el dedo meñique izquierdo en un accidente del kinder. Ahí empezó mi historial de riesgos.</p>
+          </div>
+        </div>
+        <div class="hito rv">
+          <div class="punto"></div>
+          <div class="hito-card">
+            <img class="foto-hito" src="img/hito2.jpg" alt="Mi graduación de primaria" onerror="this.remove()" />
+            <span class="anio">Fin de primaria</span><h3>Mi graduación de primaria</h3><p>Sin lugar a duda marcó una nueva etapa y un comienzo para mí: conocí el doble de personas, y algunas siguen siendo muy especiales todavía.</p>
+          </div>
+        </div>
+        <div class="hito rv">
+          <div class="punto"></div>
+          <div class="hito-card">
+            <img class="foto-hito" src="img/hito3.jpg" alt="Recuerdo del yeso" onerror="this.remove()" />
+            <span class="anio">Justo después</span><h3>El arco de metal</h3><p>Me fracturé 3 dedos porque un arco de metal me cayó encima, y estuve enyesado 1 mes. Como dije, mi vida ha tenido un sinfín de riesgos...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HABILIDADES ========== -->
+    <section id="habilidades" class="seccion" data-trans="barras">
+      <h2 class="titulo-sec rv"><span>04</span> Mis habilidades</h2>
+      <div class="skills-wrap">
+        <div class="skill rv" data-nivel="75">
+          <div class="gauge">
+            <svg viewBox="0 0 120 120"><circle class="g-fondo" cx="60" cy="60" r="52" /><circle class="g-valor" cx="60" cy="60" r="52" /></svg>
+            <div class="g-centro"><span class="g-emoji">🧘</span><span class="g-cifra"><b class="g-num">0</b><small>%</small></span></div>
+          </div>
+          <h3>Manejo de emociones</h3><p class="g-nivel">Nivel: avanzado</p>
+        </div>
+        <div class="skill rv" data-nivel="80">
+          <div class="gauge">
+            <svg viewBox="0 0 120 120"><circle class="g-fondo" cx="60" cy="60" r="52" /><circle class="g-valor" cx="60" cy="60" r="52" /></svg>
+            <div class="g-centro"><span class="g-emoji">🔥</span><span class="g-cifra"><b class="g-num">0</b><small>%</small></span></div>
+          </div>
+          <h3>Trabajar bajo presión</h3><p class="g-nivel">Nivel: muy bueno</p>
+        </div>
+        <div class="skill rv" data-nivel="85">
+          <div class="gauge">
+            <svg viewBox="0 0 120 120"><circle class="g-fondo" cx="60" cy="60" r="52" /><circle class="g-valor" cx="60" cy="60" r="52" /></svg>
+            <div class="g-centro"><span class="g-emoji">🗣️</span><span class="g-cifra"><b class="g-num">0</b><small>%</small></span></div>
+          </div>
+          <h3>Dominio del inglés</h3><p class="g-nivel">Nivel: excelente</p>
+        </div>
+        <div class="skill rv" data-nivel="90">
+          <div class="gauge">
+            <svg viewBox="0 0 120 120"><circle class="g-fondo" cx="60" cy="60" r="52" /><circle class="g-valor" cx="60" cy="60" r="52" /></svg>
+            <div class="g-centro"><span class="g-emoji">💞</span><span class="g-cifra"><b class="g-num">0</b><small>%</small></span></div>
+          </div>
+          <h3>Empatía</h3><p class="g-nivel">Nivel: superpoder ⚡</p>
+        </div>
+      </div>
+      <p class="nota rv">🚀 Lo que estoy aprendiendo ahora: <b>comunicación asertiva</b> (tengo que mejorar mi tono de voz...)</p>
+    </section>
+
+    <!-- ========== SUEÑOS ========== -->
+    <section id="suenos" class="seccion" data-trans="enfoque">
+      <h2 class="titulo-sec rv"><span>05</span> Mis sueños y metas</h2>
+      <div class="suenos-grid">
+        <div class="sueno rv"><div class="estrella">★</div><h3>Corto plazo</h3><p>Algo que realmente me asusta es el programa de diploma (IB), por eso desde ahora me estoy preparando para lograr buenas calificaciones y graduarme como uno de los mejores alumnos.</p></div>
+        <div class="sueno rv"><div class="estrella">★</div><h3>Mediano plazo</h3><p>Después, quiero entrar a una buena universidad (de preferencia con beca) para estudiar una carrera que involucre biología, como medicina.</p></div>
+        <div class="sueno rv"><div class="estrella">★</div><h3>Largo plazo</h3><p>Finalmente, quisiera viajar y conocer el mundo (nunca he salido de Perú), e irme a trabajar y conseguir títulos en el extranjero.</p></div>
+      </div>
+    </section>
+
+    <!-- ========== ENTORNO ========== -->
+    <section id="entorno" class="seccion" data-trans="rebote">
+      <h2 class="titulo-sec rv"><span>06</span> Mi entorno</h2>
+      <div class="entorno-grid">
+        <div class="persona rv"><div class="avatar">👨‍👩‍👦<img src="img/familia.jpg" alt="Mi familia" onerror="this.style.display='none'" /></div><h3>Mi familia</h3><p>Sin duda mi primera prioridad: daría mi vida por las personas que me dieron a luz. Mi mamá es como mi guía espiritual, siempre evitando que caiga en malos pasos y educándome y corrigiéndome en mi aprendizaje. Mi papá es como un compañero de guía: lo veo más como mi mejor amigo que como mi papá, siempre puedes confiar en él para favores, consejos y como dúo de videojuegos jeje.</p></div>
+        <div class="persona rv"><div class="avatar">🧑‍🤝‍🧑<img src="img/amigos.jpg" alt="Mis amigos" onerror="this.style.display='none'" /></div><h3>Mis amigos</h3><p>Tengo 2 círculos de amistades, pero los más especiales para mí son Martin y Santiago, con quienes entablé una amistad bastante duradera y saludable. Y en cuanto a las chicas, Zoe es como mi brother, mi mano derecha, mi mínimo común múltiplo, al igual que Alexa, que siempre se ríe de lo que sea que haga.</p></div>
+        <div class="persona rv"><div class="avatar">🐱<img src="img/mascota.jpg" alt="Mi gatita" onerror="this.style.display='none'" /></div><h3>Mi gatita</h3><p>Cómo olvidarla: el día que llegó no me lo creía, ya que mi mamá siempre odió tener mascotas por el pelo que dejan. Ahora no nos imaginamos cómo sería vivir sin esta gata arisca que solo duerme y come todo el día (y a la que le encanta el paté).</p></div>
+      </div>
+      <p class="nota-entorno rv">👦 Soy hijo único: a veces me gusta, pero otras veces se siente solitario (aunque tengo a mi gatita como apoyo 🐾).</p>
+    </section>
+
+    <!-- ========== DATO CURIOSO ========== -->
+    <section id="curioso" class="seccion" data-trans="cortina">
+      <h2 class="titulo-sec rv"><span>07</span> Un dato curioso</h2>
+      <div class="curioso-caja rv">
+        <p>Algo que pocas personas saben de mí...</p>
+        <button id="btnDato" class="btn-neon" data-fx="detective">¡Descúbrelo! 🎁</button>
+        <div id="datoSecreto" class="dato-secreto">De hecho, esto casi todo el mundo lo sabe, pero... ¡tengo novia! XD 💕 Y cuando escribí esto faltaban exactamente 19 horas para nuestro aniversario (y tengo que admitir que estaba algo nervioso 😳).</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>Hecho con 💚 y ❤️ por <strong>Nicolás Saldarriaga</strong> · 2026</p>
+    <a href="#inicio" class="subir" data-fx="globos">↑ Volver al inicio</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
